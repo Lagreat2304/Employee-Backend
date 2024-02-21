@@ -6,7 +6,7 @@ const sql = require("mssql");
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded());
-const port = 5000;
+const port = process.env.BACKEND_PORT || 5000;
 require('dotenv').config();
 var config = {
     user: process.env.USER,
